@@ -1,0 +1,19 @@
+.portifolio{
+    margin: 50px;
+    padding: 20px;
+    background-color: black;
+    border-radius: 12px;
+}
+.portifolio h3{
+    margin: 5px;
+    
+}
+.portifolio p{
+    margin: 5px;
+    
+}
+.portifolio img{
+    float: left;
+    width: 170px;
+    
+}

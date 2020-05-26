@@ -1,0 +1,57 @@
+@font-face {
+    font-family: 'harry-potter';
+    src: url('Fonte/harryp__-webfont.woff2') format('woff2'),
+         url('Fonte/harryp__-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+body {
+    margin: 0px;
+    font-family: 'harry-potter';
+    font-size: 35px;
+    background: rgb(131,58,180);
+    background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(24,102,4,1) 18%, rgba(98,0,125,1) 50%, rgba(24,102,4,1) 79%, rgba(116,10,150,1) 100%);
+    color: rgb(85, 26, 139);
+}
+
+.header {
+    margin: 0px;
+    padding: 2px ;
+    padding-top: 0px;
+    background-color: black;
+    text-align: center;
+    
+}
+.header h1{
+    margin: 7px;
+}
+.header ul{
+    display: flex;
+    justify-content: space-evenly;
+    margin: 10px;
+}
+.header li{
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+.header a{
+    padding: 0 25px 0 25px;
+}
+.container{
+    margin: 10px;
+    padding: 0px;
+    text-align: center;
+    border-bottom: 3px solid rgb(85, 26, 139) ;
+}
+.titulo {
+    margin: 50px 0px 50px 200px;
+    border-radius: 12px;
+    background-color: black;
+}
+.titulo h2{
+    margin: 13px 27px;
+    padding: 15px 0px;
+}
