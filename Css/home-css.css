@@ -2,18 +2,30 @@
     margin: 50px;
     padding: 20px;
     background-color: black;
+    border: ridge rgb(85, 26, 139) 5px;
     border-radius: 12px;
+    height: 360px;
 }
 .portifolio h3{
     margin: 5px;
-    
 }
 .portifolio p{
     margin: 5px;
     
 }
-.portifolio img{
+.img-pequena{
+    float: left;
+    width: 318px;
+    margin-top: 93px;
+    margin-bottom: 89px;
+    margin-right: 56px;
+    margin-left: 12px;
+}
+.img-grande{
     float: left;
     width: 170px;
-    
+    margin-top: 60px;
+    margin-bottom: 60px;
+    margin-right: 125px;
+    margin-left: 88px;
 }

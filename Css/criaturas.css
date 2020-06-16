@@ -1,0 +1,33 @@
+.fundo{
+    background-image: url(../Imagens/floresta.jpg);
+}
+.conteudo{
+    margin: 15px;
+    text-align: center;
+    padding: 0;
+}
+.catalogo{
+    margin: 5px;
+    height: 500px;
+    width: 450px;
+    border: ridge rgb(85, 26, 139) 5px;
+    background-color: black;
+    display: inline-block; /*testar o table-cell*/
+}
+.catalogo img{
+    margin-top: 50px;
+    margin-left: 120px;
+    width: 200px;
+    height: 174px;
+    border-radius: 18px;
+    display: block;
+}
+.catalogo h3{
+    margin-top: 10px;
+}
+.catalogo p{
+    margin: 0px 12px;
+    font-size: 23px;
+    display: block;
+    text-align: justify;
+}

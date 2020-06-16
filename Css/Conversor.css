@@ -1,10 +1,16 @@
 .texto{
     text-align: center;
+    background-color: black;
+    border-top: solid rebeccapurple 3px;
+    border-bottom: solid rebeccapurple 3px;
+}
+.conversores{
+    display: inline-block;
 }
 .box {
     margin: 25px 25px 10px 120px;
     float: left;
-    border: solid purple;
+    border: ridge rgb(85, 26, 139) 5px;
     width: 570px;
     height: 480px;
     text-align: center;
@@ -18,9 +24,17 @@
 .box #text{
     width: 110px;
 }
-
-.texto{
-    background-color: black;
-    border-top: solid rebeccapurple 3px;
-    border-bottom: solid rebeccapurple 3px;
+.box input{
+    height: 25px;
+    width: 60%;
+    border:none;
+    background-color: #77487a;
 }
+.box select,
+.box button{
+    background-color: purple;
+    height: 25px;
+    width: 60%;
+    border:none;
+}
+
