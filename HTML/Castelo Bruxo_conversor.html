@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../Imagens/castle.png">
+    <title>CasteloBruxo - Conversor de Moedas</title>
+    <link href="https://fonts.googleapis.com/css2?family=Metal+Mania&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../Css/Conversor.css">
+    <link rel="stylesheet" href="../Css/home_css.css">
+</head>
+<body>
+            <div class="header">
+                <div class="container">
+                    <h1>
+                        Castelo Bruxo
+                    </h1> 
+                </div>
+                <ul>
+                    <li><a href="Castelo Bruxo_home.html"><img src="../Imagens/cauldron.png" alt=""> Home</a></li>
+                    <li><a href="Castelo Bruxo_criaturas.html"><img src="../Imagens/bat.png" alt=""> Criaturas Mágicas</a></li>
+                    <li><a href="Castelo Bruxo_conversor.html"><img src="../Imagens/money.png" alt=""> Conversor de Moedas</a></li>
+                    <li><a href="Castelo Bruxo_inscrição.html"><img src="../Imagens/witch-hat.png" alt="">Inscrição</a></li>
+                </ul>
+            </div>
+            <div class="titulo">
+                <h2>Conversor de Moedas</h2>
+            </div>
+            <div class="texto">
+                No mundo bruxo tudo é diferente, incluseive o próprio dinheiro. <br>
+                Pra você que quer saber quanto dinheiro trouxa precisa ou ao contrário <br>
+                Basta verificar abaixo:
+            </div>
+            <div class="conversores">
+                <div class="box">
+                    <h3>Bruxo para Trouxa</h3> 
+                    <p>
+                        Galeão: <input id="valor_galeao" type="text"> <br>
+                        Sicles : <input id="valor_sicle" type="text"> <br>
+                        Nuquel: <input id="valor_nuquel" type="text"> <br>
+                        <button onclick="converter_1()" >Converter</button>
+                    </p>
+                    <p id="valor_real">
+
+                    </p>
+                </div>
+                <div class="box">
+                    <h3>Trouxa para Bruxo</h3>
+                    <p>
+                        Quantos reais você possui: <br>
+                        <input id="valor_reais" placeholder="R$" type="text"> <br>
+                        <button onclick="converter_2()">Converter</button>
+                    </p>
+                    <p id="valor_bruxo">
+                    </p>
+                </div>
+            </div>
+</body>
+</html>
+<script>
+    function converter_1(){
+        var galeao = Number(valor_galeao.value);
+        var nuquel = Number(valor_nuquel.value);
+        var sicle = Number(valor_sicle.value);
+        // galeao = ouro - sicle = prata - nuquel = bronze
+        var soma_dinheiro =(galeao*135)+(sicle*8)+(nuquel*0.25);
+        valor_real.innerHTML=`Você possui R$${soma_dinheiro}`;
+    }
+    function converter_2(){
+        var reais = Number(valor_reais.value);
+        var galeao = reais/135
+        var sicle = reais/8;
+        var nuquel = reais/0.25;
+        valor_bruxo.innerHTML=`Você possui ${parseInt(galeao)} moedas de galeão, ou ${parseInt(sicle)} 
+            de sicle ou ${parseInt(nuquel)} de nuquel`;
+    }
+</script>

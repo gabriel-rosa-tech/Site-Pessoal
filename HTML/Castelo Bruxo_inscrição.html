@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../Imagens/castle.png">
+    <title>CasteloBruxo - Inscrição</title>
+    <link href="https://fonts.googleapis.com/css2?family=Metal+Mania&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../Css/home_css.css">
+    <link rel="stylesheet" href="../Css/inscrição.css">
+</head>
+<body>
+        <div class="header">
+            <div class="container">
+                <h1>
+                    Castelo Bruxo
+                </h1> 
+            </div>
+            <ul>
+                <li><a href="Castelo Bruxo_home.html"><img src="../Imagens/cauldron.png" alt=""> Home</a></li>
+                <li><a href="Castelo Bruxo_criaturas.html"><img src="../Imagens/bat.png" alt=""> Criaturas Mágicas</a></li>
+                <li><a href="Castelo Bruxo_conversor.html"><img src="../Imagens/money.png" alt=""> Conversor de Moedas</a></li>
+                <li><a href="Castelo Bruxo_inscrição.html"><img src="../Imagens/witch-hat.png" alt="">Inscrição</a></li>
+            </ul>
+        </div>
+        <div class="titulo">
+            <h2>Inscrição</h2>
+        </div>
+        <div class="info_inscricao">
+            <div class="box">
+                <h3>Novos Estudantes</h3> 
+                <p>
+                    Nosso ano letivo começa em Fevereiro, não perca a inscrição dos alunos que 
+                    acabaram de completar 11 anos.
+                    Nos iremos enviar a confirmação de sua matricula junto com o material escolar
+                    .
+                </p>
+            </div>
+            <div class="box">
+                <h3>Prencha aqui</h3> <br>
+                <form>
+                    <label for="nome">Nome Completo</label>
+                <input type="text" id="nome">
+
+                <label for="">País </label>
+                <select name="" id="pais">
+                    <option value="">--Escolha--</option>
+                    <option value="">Argentina</option>
+                    <option value="">Bolívia</option>
+                    <option value="">Brasil</option>
+                    <option value="">Chile</option>
+                    <option value="">Colômbia</option>
+                    <option value="">Equador</option>
+                    <option value="">Guiana</option>
+                    <option value="">Paraguai</option>
+                    <option value="">Peru</option>
+                    <option value="">Suriname</option>
+                    <option value="">Uruguai</option>
+                    <option value="">Venezuela</option>
+                </select>
+
+                <label for="datanasc">Data de Nascimento </label>
+                <input type="date" id="datanasc">
+
+                <label for="">Email </label>
+                <input type="text" placeholder="exemple@dominio.com" id="email">
+                <div id="mensagemErro"></div>
+
+                <button type="submit" onclick="enviaDados()">Enviar</button>
+                </form>
+            </div>
+            <div class="grafico">
+                <h1>Titulo 1</h1>
+            </div>
+        </div>
+      
+</body>
+</html>
+<script>
+    function enviaDados(){
+        var erros = validaDados();
+        mensagemErro.innerHTML = ""; // Criar um local para indicar os erros de inscrição
+        
+        if(erros.length > 0){
+          for(var i=0; i < erros.length; i++){
+              var erro = erros[i];
+              var li = document.createElement("li");
+              li.innerHTML = erro;
+              mensagemErro.appendChild(li);
+
+            }
+        }
+    }
+    function validaDados(){
+        var erros=[];
+        if(!nome.value){
+          erros.push("Prencher nome!");
+        }
+
+        if(!email.value ||
+            (email.value.search("@") == -1) ||
+            (email.value.search(".") == -1) ||
+            (email.value.search(" ") >= '')){
+          erros.push("Email inválido");
+        }
+
+        if(!pais.value){
+          erros.push("Escolha um país!")
+        }
+
+        if(new Date(datanasc).value < new Date()){ //criar um um jeito de descernir que é menor que 
+          erros.push("O aluno ainda não tem 11 anos!") 
+        }
+        return erros;
+    }
+</script>
